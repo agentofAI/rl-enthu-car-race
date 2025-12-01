@@ -103,6 +103,7 @@ class Car {
         this.x = x; this.y = y; this.width = 30; this.height = 50;
         this.speed = 0; this.acceleration = 0.2; this.maxSpeed = maxSpeed; this.friction = 0.05; this.angle = 0;
         this.damaged = false; this.useBrain = controlType == "AI";
+        this.controls = { forward: false, left: false, right: false, reverse: false };
         this.sensor = new Sensor(this);
         this.brain = new NeuralNetwork([5, 6, 4]); // 5 sensors, 6 hidden, 4 outputs
         this.fitness = 0;
